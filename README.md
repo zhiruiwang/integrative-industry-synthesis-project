@@ -62,6 +62,49 @@ This repository is an **AI Career Pathway and Labor Market Intelligence Platform
 - **Recommender:** Ranks transitions by similarity score, growth, and salary; lists skill gaps.
 - **Multi-agent system:** (1) **Occupation matcher agent** – ADK agent with a tool that provides the occupation list; it chooses the best-matching occupation from the user’s free text. (2) **Roadmap generator agent** – ADK agent with a tool that returns current role and top-transition context; the agent produces the markdown roadmap.
 
+```mermaid
+flowchart TB
+    subgraph "Capstone 1: AI Programming (data workflow)"
+        D[Data Pipeline: O*NET + BLS]
+        D --> D1[Occupation dataset]
+    end
+
+    subgraph Input
+        A[User input: current occupation in natural language]
+    end
+
+    subgraph "Capstone 6: Agentic AI (multi-agent)"
+        E[Occupation Matcher Agent]
+        E --> G[Resolved occupation]
+    end
+
+    subgraph "Capstone 2: Statistical Analysis"
+        B[Labor Market Statistical Engine]
+        B --> B1[Salary distributions & growth]
+        B --> B2[Risk-adjusted opportunity scores]
+    end
+
+    subgraph "Capstone 3: Applied ML (similarity + recommender)"
+        C[Skill Similarity & Recommender]
+        C --> C1[TF-IDF overlap, growth, salary score]
+        C --> C2[Top transition paths & skill gaps]
+    end
+
+    subgraph "Capstone 6: Agentic AI (continued)"
+        F[Roadmap Generator Agent]
+        F --> H[Final Report Output]
+    end
+
+    A --> E
+    D1 --> E
+    G --> B
+    G --> C
+    D1 --> B
+    B --> C
+    C --> F
+    F --> H
+```
+
 See `docs/02_System_Design_and_Architecture.md` and the **Data pipeline** section below.
 
 ---
