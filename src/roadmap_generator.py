@@ -1,5 +1,5 @@
 """
-Roadmap generator agent (part of the multi-agent system, Capstone 6).
+Roadmap generator agent.
 
 Produces a personalized career roadmap via an ADK agent with a tool that provides
 current role and top-transition context; the agent writes the narrative.
@@ -141,7 +141,6 @@ def generate_roadmap(
 ) -> str:
     """
     Generate a 6–12 month personalized career roadmap via the roadmap-generator ADK agent.
-    Part of the multi-agent system (Capstone 6); no standalone Capstone 5 component.
 
     Requires OPENAI_API_KEY. Raises RuntimeError if the key is missing or the agent fails.
     """

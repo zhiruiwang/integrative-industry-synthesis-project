@@ -1,5 +1,5 @@
 """
-Component 1: Statistical Labor Market Analysis (Capstone 2 – Statistical Analysis).
+Component 1: Statistical Labor Market Analysis.
 Computes per-occupation metrics from real BLS/O*NET data: salary percentiles,
 growth scores, and risk-adjusted opportunity.
 """
