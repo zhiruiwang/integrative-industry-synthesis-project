@@ -1,7 +1,6 @@
 """
-Component 3: Skill Similarity & Recommender (Capstone 3 – ML methodology).
+Component 3: Skill Similarity & Recommender.
 TF-IDF + cosine similarity for occupation/skill similarity; ranks transitions and skill gaps.
-This project does not implement Capstone 4 (deep learning); similarity is framed as ML.
 """
 from typing import Optional
 

@@ -40,7 +40,7 @@ This repository is an **AI Career Pathway and Labor Market Intelligence Platform
    streamlit run app.py
   ```
    Enter your current occupation in natural language, optionally refine with skills/abilities/knowledge, and get ranked transitions plus a 6–12 month career roadmap. Results and loading spinners appear in the right panel; the roadmap section is expanded by default and shows a progress message while generating (~30 s). If occupation data is missing, the app will prompt you to run `refresh-data` first (or the data loader can run the pipeline once automatically).
-6. **Multi-agent system (Capstone 6):** Add a `.env` file with `OPENAI_API_KEY` (and `OPENAI_BASE_URL` if using a custom endpoint). Two ADK agents: (1) **Occupation matcher agent**—natural language (e.g. `"web developer"`) is resolved by an ADK agent with a tool that provides the occupation list; it picks the closest match. (2) **Roadmap generator agent**—an ADK agent with a tool that provides current role and top-transition context; the agent writes the markdown career roadmap.
+6. **Multi-agent system:** Add a `.env` file with `OPENAI_API_KEY` (and `OPENAI_BASE_URL` if using a custom endpoint). Two ADK agents: (1) **Occupation matcher agent**—natural language (e.g. `"web developer"`) is resolved by an ADK agent with a tool that provides the occupation list; it picks the closest match. (2) **Roadmap generator agent**—an ADK agent with a tool that provides current role and top-transition context; the agent writes the markdown career roadmap.
 
 ---
 
@@ -64,7 +64,7 @@ This repository is an **AI Career Pathway and Labor Market Intelligence Platform
 
 ```mermaid
 flowchart TB
-    subgraph "Capstone 1: AI Programming (data workflow)"
+    subgraph "AI Programming"
         D[Data Pipeline: O*NET + BLS]
         D --> D1[Occupation dataset]
     end
@@ -73,24 +73,24 @@ flowchart TB
         A[User input: current occupation in natural language]
     end
 
-    subgraph "Capstone 6: Agentic AI (multi-agent)"
+    subgraph "Agentic AI"
         E[Occupation Matcher Agent]
         E --> G[Resolved occupation]
     end
 
-    subgraph "Capstone 2: Statistical Analysis"
+    subgraph "Statistical Analysis"
         B[Labor Market Statistical Engine]
         B --> B1[Salary distributions & growth]
         B --> B2[Risk-adjusted opportunity scores]
     end
 
-    subgraph "Capstone 3: Applied ML (similarity + recommender)"
+    subgraph "Applied ML"
         C[Skill Similarity & Recommender]
         C --> C1[TF-IDF overlap, growth, salary score]
         C --> C2[Top transition paths & skill gaps]
     end
 
-    subgraph "Capstone 6: Agentic AI (continued)"
+    subgraph "Agentic AI (continued)"
         F[Roadmap Generator Agent]
         F --> H[Final Report Output]
     end

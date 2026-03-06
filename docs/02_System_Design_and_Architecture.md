@@ -38,7 +38,7 @@ Below is a system-level architecture diagram suitable for inclusion in the paper
 
 ```mermaid
 flowchart TB
-    subgraph "Capstone 1: AI Programming (data workflow)"
+    subgraph "AI Programming"
         D[Data Pipeline: O*NET + BLS]
         D --> D1[Occupation dataset]
     end
@@ -47,24 +47,24 @@ flowchart TB
         A[User input: current occupation in natural language]
     end
 
-    subgraph "Capstone 6: Agentic AI (multi-agent)"
+    subgraph "Agentic AI"
         E[Occupation Matcher Agent]
         E --> G[Resolved occupation]
     end
 
-    subgraph "Capstone 2: Statistical Analysis"
+    subgraph "Statistical Analysis"
         B[Labor Market Statistical Engine]
         B --> B1[Salary distributions & growth]
         B --> B2[Risk-adjusted opportunity scores]
     end
 
-    subgraph "Capstone 3: Applied ML (similarity + recommender)"
+    subgraph "Applied ML"
         C[Skill Similarity & Recommender]
         C --> C1[TF-IDF overlap, growth, salary score]
         C --> C2[Top transition paths & skill gaps]
     end
 
-    subgraph "Capstone 6: Agentic AI (continued)"
+    subgraph "Agentic AI (continued)"
         F[Roadmap Generator Agent]
         F --> H[Final Report Output]
     end
