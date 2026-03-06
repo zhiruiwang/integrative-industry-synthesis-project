@@ -90,7 +90,7 @@ Future work could include: integration with live labor market APIs; fairness aud
 
 Carnevale, A. P., Smith, N., & Strohl, J. (2010). *Help wanted: Projections of jobs and education requirements through 2018*. Georgetown University Center on Education and the Workforce. [https://cew.georgetown.edu/wp-content/uploads/2014/12/fullreport.pdf](https://cew.georgetown.edu/wp-content/uploads/2014/12/fullreport.pdf)
 
-National Center for O*NET Development. (n.d.). ONET Resource Center*. U.S. Department of Labor, Employment and Training Administration. [https://onetcenter.org/](https://onetcenter.org/)
+National Center for O*NET Development. (n.d.). *O*NET Resource Center*. U.S. Department of Labor, Employment and Training Administration. [https://onetcenter.org/](https://onetcenter.org/)
 
 O’Neil, C. (2016). *Weapons of math destruction: How big data increases inequality and threatens democracy*. Crown.
 
