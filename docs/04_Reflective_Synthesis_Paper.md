@@ -12,21 +12,21 @@ The problem is appropriate for AI because it involves **large-scale labor market
 
 The integrated artifact is an **AI Career Pathway and Labor Market Intelligence Platform**: a Streamlit application where users enter their current occupation in natural language, optionally refine with skills or preferences, and receive ranked career transitions plus a 6–12 month narrative roadmap. Under the hood, a reproducible data pipeline (O*NET and BLS) builds the occupation dataset; a labor market statistical engine supplies growth and salary metrics; TF-IDF–based skill similarity and a weighted recommender rank transitions and identify skill gaps; and two ADK agents—an occupation matcher and a roadmap generator—resolve natural-language input and produce the final report. The solution combines methods from four prior capstones (data workflow, statistics, ML/recommender, agentic AI) into one runnable pipeline with documented architecture and limitations.
 
-**Platform interface.** The figures below show the Streamlit app: the landing page (occupation input and optional profile refinement), followed by the results panel with ranked transitions, skill gaps, and the generated roadmap.
+**Platform interface.** The figures below show the Streamlit app: the landing page (occupation input and optional profile refinement), followed by the results panel with details about current occupation, ranked transitions, skill gaps, and the generated roadmap.
 
-| **Landing page** | **Results — transitions and roadmap** |
+| **Landing page** | **Results — first viewport** |
 |------------------|---------------------------------------|
-| ![Landing page](../img/landing_page.png) | ![Results first page](../img/results_first_page.png) |
+| ![Landing page](../img/landing_page.png) | ![First viewport](../img/results_first_page.png) |
 
-*Figure 1. Landing page (left): natural-language occupation input; Results first page (right): ranked transitions and roadmap section.*
+*Figure 1. Landing page (left): occupation and optionally skills, abilities, or knowledge; Results — first viewport (right): Details about the current occupation.*
 
-![Results second page](../img/results_second_page.png)
+![Second viewport](../img/results_second_page.png)
 
-*Figure 2. Results second page: transition details and skill-gap breakdown.*
+*Figure 2. Results second viewport: Ranked career transitions with similarity scores, growth, salary, and skill gaps.*
 
-![Results third page](../img/results_third_page.png)
+![Third viewport](../img/results_third_page.png)
 
-*Figure 3. Results third page: 6–12 month narrative career roadmap from the roadmap generator agent.*
+*Figure 3. Results third viewport: 6–12 month narrative career roadmap from the roadmap generator agent.*
 
 ---
 
