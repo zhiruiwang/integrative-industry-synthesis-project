@@ -12,6 +12,22 @@ The problem is appropriate for AI because it involves **large-scale labor market
 
 The integrated artifact is an **AI Career Pathway and Labor Market Intelligence Platform**: a Streamlit application where users enter their current occupation in natural language, optionally refine with skills or preferences, and receive ranked career transitions plus a 6–12 month narrative roadmap. Under the hood, a reproducible data pipeline (O*NET and BLS) builds the occupation dataset; a labor market statistical engine supplies growth and salary metrics; TF-IDF–based skill similarity and a weighted recommender rank transitions and identify skill gaps; and two ADK agents—an occupation matcher and a roadmap generator—resolve natural-language input and produce the final report. The solution combines methods from four prior capstones (data workflow, statistics, ML/recommender, agentic AI) into one runnable pipeline with documented architecture and limitations.
 
+**Platform interface.** The figures below show the Streamlit app: the landing page (occupation input and optional profile refinement), followed by the results panel with ranked transitions, skill gaps, and the generated roadmap.
+
+| **Landing page** | **Results — transitions and roadmap** |
+|------------------|---------------------------------------|
+| ![Landing page](../img/landing_page.png) | ![Results first page](../img/results_first_page.png) |
+
+*Figure 1. Landing page (left): natural-language occupation input; Results first page (right): ranked transitions and roadmap section.*
+
+![Results second page](../img/results_second_page.png)
+
+*Figure 2. Results second page: transition details and skill-gap breakdown.*
+
+![Results third page](../img/results_third_page.png)
+
+*Figure 3. Results third page: 6–12 month narrative career roadmap from the roadmap generator agent.*
+
 ---
 
 ## Integration of Prior Projects and Methods
@@ -58,7 +74,7 @@ Governance considerations for real-world use would include defining who is accou
 
 The integrated system was evaluated against its intended goals. It successfully produces labor market metrics (growth, salary, risk-adjusted scores) per occupation; ranks transitions by a combined score (profile overlap 80%, growth 10%, salary 10%) and identifies skill, knowledge, and ability gaps; and generates a structured, human-readable career roadmap via the roadmap generator agent.
 
-**Strengths:** Coherent integration of statistics, skill similarity (TF-IDF), recommender, and multi-agent system (occupation matcher + roadmap generator) in a single pipeline; observable outputs via the Streamlit app (full report, ranked transition table with gaps); reproducibility (deterministic logic, `requirements.txt`, clear modules); interpretability (profile overlap, growth, salary delta, skill/knowledge/ability gaps exposed; roadmap explains limitations).
+**Strengths:** Coherent integration of statistics, skill similarity (TF-IDF), recommender, and multi-agent system (occupation matcher + roadmap generator) in a single pipeline; observable outputs via the Streamlit app (full report, ranked transition table with gaps—see Figures 1–3 above); reproducibility (deterministic logic, `requirements.txt`, clear modules); interpretability (profile overlap, growth, salary delta, skill/knowledge/ability gaps exposed; roadmap explains limitations).
 
 **Tradeoffs assessed:** TF-IDF and a simple weighted score were chosen so the pipeline runs quickly and remains interpretable; more complex models could improve accuracy at the cost of explainability. Using a small sample keeps the artifact deliverable; production would require larger datasets and validation. Outputs are framed as decision support, with explicit disclaimers and risk/limitation text in the roadmap.
 
