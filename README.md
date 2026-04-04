@@ -2,6 +2,10 @@
 
 This repository is an **AI Career Pathway and Labor Market Intelligence Platform** using O*NET and BLS data.
 
+
+https://github.com/user-attachments/assets/563d7197-1978-4f6b-ab28-3c57525bc426
+
+
 ---
 
 ## Contents
